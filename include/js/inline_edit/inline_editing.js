@@ -1,4 +1,4 @@
-
+// gai - 12-9-26
 (function(){
 
 	gp_editing = {
@@ -81,7 +81,7 @@
 			}
 
 			if( typeof(create_draft) == 'undefined' ){
-				var create_draft = true;
+				create_draft = true;
 			}
 
 			var $wrap = $('#ckeditor_wrap');
@@ -275,8 +275,8 @@
 				html += '<a data-cmd="ck_save" class="ckeditor_control ck_save">' + gplang.Save + '</a>';
 				html += '<span class="ck_saving">' + gplang.Saving + '</span>';
 				html += '<span class="ck_saved">' + gplang.Saved + '</span>';
-				html += '<a data-cmd="Publish" class="ckeditor_control ck_publish">' + gplang.Publish + '</>';
-				html += '<a data-cmd="Dismiss" class="ckeditor_control ck_publish">' + gplang.Dismiss + '</>';
+				html += '<a data-cmd="Publish" class="ckeditor_control ck_publish">' + gplang.Publish + '</a>';
+				html += '<a data-cmd="Dismiss" class="ckeditor_control ck_publish">' + gplang.Dismiss + '</a>';
 				html += '<a data-cmd="ck_close" class="ckeditor_control">' + gplang.Close + '</a>';
 				html += '</div>';
 
@@ -426,7 +426,7 @@
 				return type;
 			}
 
-			var type = $section.prop('class').substring(16);
+			type = $section.prop('class').substring(16);
 			return type.substring(0, type.indexOf(' '));
 		},
 
@@ -451,7 +451,7 @@
 				return;
 			}
 
-			var c = 'selected'
+			var c = 'selected';
 			var h = '<div id="cktabs" class="cktabs">';
 			$areas.each(function(){
 				h += '<a class="ckeditor_control ' + c + '" data-cmd="SwitchEditArea" '
