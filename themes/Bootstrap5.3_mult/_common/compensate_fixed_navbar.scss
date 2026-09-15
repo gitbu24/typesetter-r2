@@ -1,0 +1,23 @@
+
+
+// padding-top for the body element
+body {
+  padding-top: $navbar-height;
+}
+
+// Prevent targeted anchors hiding behind fixed navbar
+// default compensation
+.GPAREA a[name]:not([href]),
+.GPAREA a[id]:not([href]) {
+  margin-top: calc( ( #{$navbar-height} + 2rem ) * -1 );
+  padding-top: calc( #{$navbar-height} + 2rem );
+  z-index: -5;
+}
+
+// compensation when logged-in
+// with support for HideAdminUI plugin https://github.com/juek/HideAdminUI
+html:not(.override_admin_style) body.gpAdmin .GPAREA a[name]:not([href]),
+html:not(.override_admin_style) body.gpAdmin .GPAREA a[id]:not([href]) {
+  margin-top: calc( ( #{$navbar-height} + 2rem + 29px ) * -1 );
+  padding-top: calc( #{$navbar-height} + 2rem + 29px );
+}
